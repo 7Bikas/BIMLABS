@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<
+<!--<html>
+<head>
+  <style>
+    /* Style the body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style the container */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style the heading */
+    h1 {
+      color: greenyellow;
+      margin: 0 0 20px;
+    }
+
+    /* Add a pseudo-element to the container */
+    .container::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    /* Style the content sections */
+    .section {
+      float: left;
+      width: 50%;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    /* Style the left section */
+    .section.left {
+      background-color: #f5f5f5;
+    }
+
+    /* Style the right section */
+    .section.right {
+      background-color: #e0e0e0;
+    }
+
+    /* Style the text inside sections */
+    .section p {
+      color: #666666;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Pseudo Element Selector Example</h1>
+    <div class="section left">
+      <h2>Section 1</h2>
+      <p>This is the left section content.</p>
+    </div>
+    <div class="section right">
+      <h2>Section 2</h2>
+      <p>This is the right section content.</p>
+    </div>
+  </div>
+</body>
+</html>
+-->
+<html>
+    <head>
+        <style>
+            p::selection{
+                color: bisque;
+                background-color: purple;
+            }
+            h2,h1::first-line{
+                color: lightskyblue;
+                background-color: azure;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="after">
+            <h1>Hello Everyone!!</h1>
+            <p>This is the use  of pseudo element.</p>
+            <h2>Have a good time ahead</h2>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <script>
+    function validateLoginForm() {
+      // Get input values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Perform validations
+      if (username === '' || password === '') {
+        // Check if both username and password are required
+        displayError('Username and password are required.');
+      } else if (username === password) {
+        // Check if username and password are the same
+        displayError('Username and password cannot be the same.');
+      } else if (username.length <= 5 || password.length <= 5) {
+        // Check if username and password length is greater than 5 characters
+        displayError('Username and password should be greater than 5 characters.');
+      } else if (username !== 'nccsBim123' || password !== 'nccsKathmandu') {
+        // Check if username is "nccsBim123" and password is "nccsKathmandu"
+        displayError('Invalid username or password.');
+      } else {
+        // All conditions are matched
+        displayWelcome('Welcome to NCCS!');
+      }
+    }
+
+    function displayError(message) {
+      document.getElementById('error').style.display = 'block'; 
+      document.getElementById('error').textContent = message;
+      document.getElementById('welcome').style.display = 'none';
+    }
+
+    function displayWelcome(message) {
+      document.getElementById('error').style.display = 'none';
+      document.getElementById('welcome').style.display = 'block';
+      document.getElementById('welcome').textContent = message;
+    }
+  </script>
+  <style>
+    .error {
+      color: red;
+      display: none;
+    }
+    .welcome {
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Login Form</h1>
+  <form onsubmit="event.preventDefault(); validateLoginForm();">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required>
+    <br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="error" class="error"></div>
+  <div id="welcome" class="welcome"></div>
+</body>
+</html>

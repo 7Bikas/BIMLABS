@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const country = document.getElementById("country").value;
+            const usernameRegex = /^[a-zA-Z0-9]{8}$/;
+            const passwordRegex = /^[0-9][a-zA-Z0-9]*$/;
+
+            if (!usernameRegex.test(username)) {
+                alert("Username must be exactly 8 characters long and alphanumeric.");
+                return false;
+            }
+
+            if (!passwordRegex.test(password)) {
+                alert("Password must start with a digit and be alphanumeric.");
+                return false;
+            }
+
+            if (country === "") {
+                alert("Please select a country.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username (8 characters long):</label>
+        <input type="text" id="username" name="username" maxlength="8" required><br><br>
+
+        <label for="password">Password (Start with a digit):</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select a country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

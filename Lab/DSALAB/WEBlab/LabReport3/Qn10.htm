@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <script>
+            function Click(){
+                div1.style.backgroundColor="green";
+            }
+            function Click1(){
+                div2.style.backgroundColor="blue";
+            }
+            function Click2(){
+                div3.style.backgroundColor="yellow";
+            }
+            function Click3(){
+                div4.style.backgroundColor="pink";
+            }
+            function Click4(){
+                div5.style.backgroundColor="maroon";
+            }
+            function Click5(){
+                div6.style.backgroundColor="skyblue";
+            }
+        </script>
+        <style>
+            div{
+                margin: 2px;
+                border:1px solid black;
+                float:left;
+                width:20%;
+                height:30px;
+                background-color:gray;
+            }
+
+        </style>
+        </head>
+        <body>
+            <div id="div1" onclick="Click()">First Class</div>
+            <div id="div2" onmousedown="Click1()">Second Class</div>
+            <div id="div3" onmouseenter="Click2()">Third Class</div>
+            <div id="div4" onmouseout="Click3()">Fouth Class</div>
+            <div id="div5" ondblclick="Click4()">Fifth Class</div>
+            <div id="div6" onmouseleave="Click5()">Sixth Class</div>
+           
+        </body> 
+        </html>

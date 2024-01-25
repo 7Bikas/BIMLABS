@@ -1,0 +1,42 @@
+<!-- 2. Write a JavaScript code to validate user submitted data: Username, password and phone.
+(Hint: none of the field are blank, password is at least 6 character and phone number
+contain 7 digits. -->
+<html>
+    <head>
+        <title>Question no 2</title>
+    </head>
+    <body>
+        <form >
+            <label for="username">Name </label>
+            <input type="text" id="username" required><br> <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" required><br><br>
+            <label for="phone">Phone </label>
+            <input type="number" id="phone"><br><br>
+            <input type="submit" onclick="validateForm()">
+        </form>
+        <script>
+            function validateForm(){
+                var n1= document.getElementById("username").value;
+            var n2=document.getElementById("password").value;
+            var n3=document.getElementById("phone").value;
+            if(n1=='' && n2=='' && n3==''){
+                alert("Please fill the above field.");
+                return false;
+            }
+
+            
+            if(n2.length < 6){
+                alert("Password must be 6 character ");
+                return false;
+            }
+            if(n3.length != 7){
+                alert("Number must be of seven digit . ");
+                return false;
+            }
+            alert("Valid Detail");
+            return true;
+            }
+        </script>
+    </body>
+</html>

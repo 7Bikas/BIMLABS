@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Form</title>
+ 
+</head>
+<body>
+  <h1>Welcome Message Form</h1>
+  <form onsubmit="validateData(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password">
+    
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone">
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+   function validateData(event) {
+    event.preventDefault();
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var phone = document.getElementById('phone').value;
+  
+  if (username === '' || password === '' || phone === '') {
+    alert('Please fill in all the fields.');
+    return false;
+  }
+  
+  if (password.length < 6) {
+    alert('Password must be at least 6 characters long.');
+    return false;
+  }
+  
+  if (phone.length!=7) {
+    alert('Phone number must contain exactly 7 digits.');
+    return false;
+  }
+  
+  // Data is valid
+   alert('Data is valid');
+}
+  </script>
+</body>
+</html>

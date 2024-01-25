@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String and Number Form</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome Message Form</h1>
+  <form id="welcomeForm" onsubmit="checkInput(event)">
+    <label for="stringInput">Enter a string:</label>
+    <input type="text" id="stringInput" required><br>
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" required><br>
+    <span id="errorMessage" class="error"></span><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function checkInput(event) {
+      event.preventDefault();
+      
+      var string = document.getElementById('stringInput').value;
+      var number = parseInt(document.getElementById('numberInput').value);
+      var errorMessage = document.getElementById('errorMessage');
+      
+      if (string === 'JavaString' && number === '1996') {
+        // Display welcome message
+        errorMessage.innerHTML = 'Welcome! You entered the correct string and number.';
+      } else {
+        // Ask user to re-enter string and number
+        errorMessage.innerHTML = 'Please re-enter the string and number.';
+      }
+    }
+  </script>
+</body>
+</html>

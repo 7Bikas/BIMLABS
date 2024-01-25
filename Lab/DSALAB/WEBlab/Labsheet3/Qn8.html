@@ -1,0 +1,69 @@
+<!-- Create three divisions in which first division should be red, second should be blue and
+third should be green. After this create a button with name change. When button is
+clicked change the background of all division, border of division 1 should be green,
+border of division two should be yellow, border of 3 rd division should be blue, change the
+radius of border for any two divisions. -->
+<html>
+    <head>
+        <style>
+            #div1{
+                background-color: red;
+                border: 3px solid black;
+                margin: 10px;
+                border-radius: 2px;
+                width: 50%;
+                height: 50px;
+                text-align: center;
+            }
+            #div2{
+                background-color: blue;
+                border: 3px solid black;
+                margin: 10px;
+                border-radius: 2px;
+                width: 50%;
+                height: 50px;
+                text-align: center;
+            }
+            #div3{
+                background-color: green;
+                border: 3px solid black;
+                margin: 10px;
+                border-radius: 2px;
+                width: 50%;
+                height: 50px;
+                text-align: center;
+            }
+            button{
+                background-color: green;
+                height: 35px;
+                border-radius: 5px;
+                width: 75px;
+            }
+        </style>
+        <script>
+            function change(){
+                var a=document.getElementById("div1");
+                a.style.backgroundColor= "pink";
+                a.style.borderRadius="10px";
+                a.style.borderColor="green";
+
+                var a1=document.getElementById("div2");
+                a1.style.backgroundColor= "purple";
+                a1.style.borderRadius="10px";
+                a1.style.borderColor="yellow";
+
+                var a2=document.getElementById("div3");
+                a2.style.backgroundColor= "maroon";
+                a2.style.borderRadius="10px";
+                a2.style.borderColor="blue";
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <button onclick="change()">Change</button>
+    </body>
+</html>

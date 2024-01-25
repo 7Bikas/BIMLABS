@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Form </title>
+    </head>
+    <body>
+        <form onsubmit="validateform(event)">
+        <label for="str">String:</label>
+        <input type="text" id="str" name="string"><br>
+        <label for="num">Number:</label>
+        <input type="number" id="num" name="number"><br>
+        <input type="submit" value="submit">
+        <p id="res"></p>
+        </form>
+
+        <script>
+            function validateform(event){
+                event.preventDefault();
+                var a =document.getElementById("str").value;
+                var b=document.getElementById("num").value;
+                var c=document.getElementById("res");
+                if(a==="javascript" && b==='1996'){
+                    c.innerHTML="Welcome ";
+                }
+                else{
+                    c.innerHTML="please check string and number ";
+                }
+            }
+        </script>
+    </body>
+</html>

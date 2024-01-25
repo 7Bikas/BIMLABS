@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <h1>Form Validation</h1>
+  <form id="myForm" onsubmit="validateForm(event)">
+    <h2>Radio Buttons:</h2>
+    <input type="radio" name="radio" value="option1"> Option 1
+    <input type="radio" name="radio" value="option2"> Option 2
+    <input type="radio" name="radio" value="option3"> Option 3
+    <br><br>
+    
+    <h2>Checkboxes:</h2>
+    <input type="checkbox" name="checkbox" value="checkbox1"> Checkbox 1
+    <input type="checkbox" name="checkbox" value="checkbox2"> Checkbox 2
+    <input type="checkbox" name="checkbox" value="checkbox3"> Checkbox 3
+    <br><br>
+    
+    <h2>Select Button:</h2>
+    <select name="select" id="select">
+      <option value="">-- Select an option --</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+    <br><br>
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function validateForm(event) {
+        event.preventDefault();
+      var checkboxes = document.getElementsByName('checkbox');
+      console.log(checkboxes);
+      var checkedCount = 0;
+      
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          checkedCount++;
+        }
+      }
+      
+      if (checkedCount < 2) {
+        alert('Please select at least two checkboxes.');
+        return false;
+      }
+      
+      // Form is valid
+      alert("data is valid");
+    }
+  </script>
+</body>
+</html>

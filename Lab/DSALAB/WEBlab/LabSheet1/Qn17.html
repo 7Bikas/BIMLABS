@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Form </title>
+    </head>
+    <body>
+       <center>
+        <h1>XYZ College of IT</h1>
+        <p>Student Detail Form</p>
+       </center> 
+       <hr color="blue">
+       <form method="post" action="submit.php" >
+        <b>
+            <fieldset>
+                <legend align="top">Personal Information</legend>
+                <label for="name" >Name:</label>
+                <input type="text" id="name" name="NAME" maxlength="45" size="50" required><br><br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="ADDRESS" size="35" ><br><br>
+                <label for="sex">Sex:</label>
+                <input type="radio" id="male" name="sex">
+                <label for="male">MAle</label>
+                <input type="radio" id="female" name="sex">
+                <label for="female">Female</label><br><br>
+                <label for="color">Select your favourite color:</label>
+                <input type="color" id="color" name="Color"><br><br>
+                <label for="date">Date of Birth</label>
+                <input type="date" id="date" name="Date"><br><br>
+                <label for="photo">Upload Citizenship photo :</label>
+                <input type="file" id="photo" name="Citizen"><br><br>
+                <label for="mobile">Mobile Number: </label>
+                <input type="tel" id="mobile" name="Phone" pattern="[0-9]{10}"><br><br>
+                <label for="time">Appointment time</label>
+                <input type="time" id="time" name="Appointment" >
+                </fieldset><br><br>
+                <fieldset>
+                    <legend align="right" >Hobbies and Education</legend>
+                    <label for="hobbies">Hobbies :</label>
+                    <input type="checkbox" name="chbox" id="movies">
+                    <label for="movies"> Movies</label>
+                    <input type="checkbox" name="chbox" id="fball">
+                    <label for="fball"> Playing Football</label>
+                    <input type="checkbox" name="chbox" id="nobel">
+                    <label for="nobel"> Reading Nobel</label>
+                    <input type="checkbox" name="chbox" id="other" >
+                    <label for="other"> Other</label><br><br>
+                    <label for="edu">education :</label>
+                    <select id="education" name="Education">
+                        <option vlue="PHD">PHD</option>
+                        <option value="Masters">Master</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="+2">+2</option>
+                    </select>
+                </fieldset><br><br>
+                <hr color="black">
+                <label for="few">Few Words</label><br>
+                <textarea name="Word" id="few" rows="5" cols="30"></textarea><br><br>
+                <input type="submit" value="send">
+                <input type="Reset" value="clear">
+            </b>
+       </form>
+    </body>
+</html>

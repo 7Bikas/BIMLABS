@@ -1,0 +1,38 @@
+<!-- Write a program in JavaScript to take a two number as input from user and calculate sum,
+difference and multiplication. -->
+<html>
+    <head>
+        <title>Maths</title>
+    </head>
+    <body>
+        <input type="number" id="first" placeholder="Enter first number :">
+    <input type="number" id="second" placeholder="Enter second number:">
+    <br><br>
+    <button onclick="sum()">Sum</button>
+    
+    <button onclick="diff()">Difference</button>
+ 
+    <button onclick="multi()">Multiplication</button>
+    <p id="result"></p>
+        <script>
+            let  res =document.getElementById("result");
+            
+            function sum(){
+                var a=parseInt(document.getElementById("first").value);
+                var a1=parseInt(document.getElementById("second").value);
+                res.innerHTML=("Sum ="+(a+a1));
+
+            }
+            function diff(){
+                var a=parseInt(document.getElementById("first").value);
+                var b=parseInt(document.getElementById("second").value);
+                res.innerHTML=("Difference"+(a-b));
+            }
+            function multi(){
+                var a=parseInt(document.getElementById("first").value);
+                var aa=parseInt(document.getElementById("second").value);
+                res.innerHTML=("Multiplication :"+(a*aa));
+            }
+    </script>
+    </body>
+</html>

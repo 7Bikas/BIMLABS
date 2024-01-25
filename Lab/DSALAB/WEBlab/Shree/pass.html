@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Show Password</title>
+    </head>
+    <h2><b>Password Visibility</b></h2>
+    <label for="Password" >Password:</label>
+    <input type="password" id="password">
+    <button id="toggel" onclick="showPassword()">Show</button>
+    <script>
+        function showPassword(){
+            var passwordinput=document.getElementById("password");
+            var toggel=document.getElementById("toggel");
+            if(passwordinput.type==="password"){
+                passwordinput.type="text";
+                toggel.innerHTML="hide";
+            }
+            else{
+                passwordinput.type="password";
+                toggel.innerHTML="show";
+            }
+        }
+    </script>
+</html>

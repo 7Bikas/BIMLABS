@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Country Winner</title>
+</head>
+<body>
+    <h1>Which country will win today?</h1>
+    <form id="country-form">
+        <input type="radio" id="nepal" name="country" value="Nepal">
+        <label for="nepal">Nepal</label><br>
+        <input type="radio" id="usa" name="country" value="USA">
+        <label for="usa">USA</label><br>
+        <button type="button" onclick="displayResult()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function displayResult() {
+            var form = document.getElementById("country-form");
+            var selectedCountry = form.elements["country"].value;
+
+            var resultDiv = document.getElementById("result");
+            if (selectedCountry === "Nepal") {
+                resultDiv.innerHTML = "Hurray! We win!";
+            } else if (selectedCountry === "USA") {
+                resultDiv.innerHTML = "Try again.";
+            }
+        }
+    </script>
+</body>
+</html>

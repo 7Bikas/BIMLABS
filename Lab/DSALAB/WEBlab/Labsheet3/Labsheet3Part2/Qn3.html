@@ -1,0 +1,57 @@
+<!-- 3. Write a program in Java Script to create radio buttons, checkboxes and select button and
+validate them. It is required at least two elements of checkbox are selected. -->
+<html>
+    <head>
+        <title>Qn3</title>
+    </head>
+    <body>
+        <form onsubmit="validation(event)">
+            <label for="country">Nationality:</label>
+            <input type="radio" id="Nepal" name="country">
+            <label for="Nepal">Nepali</label>
+            <input type="radio" id="other" name="country">
+            <label for="other">Foreigners</label>
+            <br><br>
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" name="hobbies" id="hobbies">Playing Games
+        <input type="checkbox" name="hobbies" >Reading nobel
+        <input type="checkbox" name="hobbies">Other
+            <br><br>
+            <label for="education">Select your Education: </label>
+            <select name="edu" id="education">
+                <option value="" selected>Select</option>
+                <option value="SEE">SEE</option>
+                <option value="+2">PlusTwo</option>
+                <option value="bachelors">Bachelors</option>
+                </select>
+                <br><br>
+            <input type="submit" value="submit">
+    
+        </form>
+        <script>
+            function validation(event){
+                event.preventDefault();
+
+                var chbox = document.getElementsByName('hobbies');
+                var count = 0;
+
+
+                for(var i=0 ; i<chbox.length ; i++){
+                    if(chbox[i].checked){
+                    count++;
+                  }
+                }
+
+                if(count<2){
+                    alert("At least 2 checkbox must be selected.");
+                    return false;
+                }
+
+                alert("Condition Met!!");
+                return true;
+
+            }
+
+        </script>
+    </body>
+</html>

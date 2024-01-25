@@ -1,0 +1,42 @@
+<!-- <html>
+    <head>
+        <script>
+             function getconcat(){
+            var a=document.getElementById("bikas").value;
+            let b=document.getElementById("bh").value;
+            let rus=document.getElementById("res");
+            var anj=a.concat(b);
+            rus.innerHTML="Concat "+anj;
+        }
+        </script>
+    
+    </head>
+    <body>
+        <input type="text" id="bikas">
+        <input type="text" id="bh">
+        <p id="res"></p>
+        <br><br>
+        <button onclick="getconcat()">Con</button>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The concat() Method</h2>
+
+<p>The concat() method merges (concatenates) arrays:</p>
+
+<p id="demo"></p>
+
+<script>
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys);
+
+document.getElementById("demo").innerHTML = myChildren;
+document.write(myChildren.length);
+</script>
+
+</body>
+</html>

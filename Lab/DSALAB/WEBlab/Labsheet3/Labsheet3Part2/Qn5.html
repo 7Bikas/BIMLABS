@@ -1,0 +1,40 @@
+<!-- Write a JavaScript code to ensure that the following user submitted data are in correct
+format: roll no., email, phone number and name. (Roll no. and phone no. are numbers;
+name is not blank and email is in valid format). -->
+ <html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <form onsubmit="Validation(event)">
+        <label for="name">Name :</label>
+        <input type="text" id="nam" >
+        <br><br>
+        <labe fro="Email">Email :</labe>
+        <input type="email" id="emal" required>
+        <br><br>
+        <labe fro="Phone">Phone :</labe>
+        <input type="tel" id="phone" required >
+        <br><br>
+        <labe fro="Rollno">Roll No :</labe>
+        <input type="number" id="Rollno" required>
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+        <script>
+            function Validation(event){
+                event.preventDefault();
+
+                var na=document.getElementById('nam').value;
+                if(na===''){
+                    alert("Name must be filled .");
+                    return false;
+                }
+                alert("Welcome!!");
+                return true;
+            }
+        </script>
+    </body>
+</html>
+
+    

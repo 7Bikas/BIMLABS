@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love Confession</title>
+<style>
+  body {
+    background-image: url('29.jpg'); /* Replace 'background.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+  #confessButton {
+    padding: 10px 20px;
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+<button id="confessButton">Thailand</button>
+
+<script>
+  const confessButton = document.getElementById("confessButton");
+  
+  confessButton.addEventListener("click", () => {
+    const response = confirm("Khana khais?");
+    
+    if (response) {
+      alert("Good girl  Thailand!");
+    } else {
+      alert("Ja khana khayara aaijo ");
+    }
+  });
+</script>
+</body>
+</html>

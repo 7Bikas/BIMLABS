@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Visibility</title>
+  <script>
+    function togglePasswordVisibility() {
+      var passwordInput = document.getElementById('password');
+      var toggleButton = document.getElementById('toggleButton');
+
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleButton.textContent = 'Hide';
+      } else {
+        passwordInput.type = 'password';
+        toggleButton.textContent = 'Show';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Password Visibility</h1>
+  <label for="password">Password:</label>
+  <input type="password" id="password">
+  <button id="toggleButton" onclick="togglePasswordVisibility()">Show</button>
+</body>
+</html>

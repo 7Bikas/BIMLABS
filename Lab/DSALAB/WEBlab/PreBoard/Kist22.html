@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validate Form</title>
+    <script>
+        function validateForm() {
+            var nameRegex = /^[a-zA-Z]{8}$/; // Removed the space inside the regex
+            const passwordRegex = /^[0-9][a-zA-Z0-9]*$/;
+            var n1 = document.getElementById("name").value;
+            var n2 = document.getElementById("psw").value;
+            var n3 = document.getElementById("country");
+            if (!nameRegex.test(n1)) {
+                alert("Name should be of length 8");
+            } else if (!passwordRegex.test(n2)) {
+                alert("Password must start with a digit and be alphanumeric");
+            } else if (n3.value === "") {
+                alert("Country should be selected");
+            } else {
+                alert("Welcome");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="submit.php" method="post">
+        <label for="name">User Name:</label>
+        <input type="text" id="name" name="Username" required><br><br>
+        <label for="psw">Password:</label>
+        <input type="password" id="psw" name="Password" required><br><br> <!-- Added the 'required' attribute -->
+        <label for="country">Country:</label>
+        <select id="country" name="Country1">
+            <option value="">Select</option>
+            <option value="Nepal">Nepal</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+        </select>
+        <input type="submit" value="Submit" onclick="validateForm()"> <!-- Changed the button type to 'submit' -->
+    </form>
+</body>
+</html>

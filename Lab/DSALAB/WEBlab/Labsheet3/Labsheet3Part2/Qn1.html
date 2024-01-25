@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+Qn1 
+        </title>
+    </head>
+    <body>
+        <form onsubmit="validation(event)">
+            <p>Enter a string </p>
+            <input type="text" id="string">
+            <p>Enter a number </p>
+            <input type="number" id="num">
+            <p id="res"></p>
+            <input type="submit" value="submit">
+        </form>
+        <script>
+            function validation(event){
+                event.preventDefault();
+                var str1=document.getElementById("string").value;
+                var num1=document.getElementById("num").value;
+                var reasult =document.getElementById("res");
+                if(str1==="JavaScript" &&  num1==="1996"){
+                    reasult.innerHTML="welcome ! Data is valid ";
+                }else{
+                    reasult.innerHTML="Please try again";
+                }
+            }
+        </script>
+
+    </body>
+</html>

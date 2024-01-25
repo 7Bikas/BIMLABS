@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Form Validate</title>
+    </head>
+    <body>
+        <form action="submit.php" method="post" >
+            <label for="name" >User Name :</label>
+            <input type="text" id="name" name="Username"><br><br>
+            <label for="psw">Password</label>
+            <input type="password" id="psw" ><br><br>
+            <label for="email">Email :</label>
+            <input type="email" id="email"><br><br>
+            <input type="button" value="submit" onclick="validateForm()">
+        </form>
+        <script>
+            function validateForm(){
+                var nameRegex=/^[a-zA-Z] {8}*$/;
+                const passwordRegex=/^[0-9][a-zA-Z0-9]*$/;
+                const emailRegex=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+                var n1=document.getElementById("name").value;
+                var n2=document.getElementById("psw").value;
+                var n3=document.getElementById("email").value;
+                var len=n1.length;
+                // if(len!=8){
+                //     // prompt("Name should of length 8")
+                //     document.write("Name should of length 8");
+                 if(!nameRegex.test(n1)){
+                    document.write("It should contain characters only! and length 8");
+                }
+                
+                else if(!passwordRegex.test(n2)){
+                    alert("Password must start with a digit and be alphanumeric");
+                    return false;
+                }
+                else if(!emailRegex.test(n3)){
+                    alert("Email must be valid ");
+                }else  {
+                    alert("Welcome");
+                }
+
+            }
+        </script>
+    </body>
+</html>
